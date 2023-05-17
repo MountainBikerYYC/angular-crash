@@ -25,8 +25,10 @@ export class TaskService {
     return this.http.delete<Task>(url);
   }
 
-  addTask() {
-    console.log('hello from taskService addtask');
+  addTask(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    console.log(task);
+    return this.http.post<Task>(this.apiUrl, task, httpOptions);
   }
 
   updateTaskReminder(task: Task): Observable<Task> {

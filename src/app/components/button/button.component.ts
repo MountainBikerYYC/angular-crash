@@ -10,8 +10,7 @@ import { TaskService } from 'src/app/services/task.service';
 export class ButtonComponent implements OnInit {
   @Input() text: string | undefined;
   @Input() color: string | undefined;
-  @Output() btnClick: EventEmitter<Task>= new EventEmitter();
-
+  @Output() btnClick: EventEmitter<Task> = new EventEmitter();
 
   constructor(private taskService: TaskService) {}
 
@@ -19,7 +18,6 @@ export class ButtonComponent implements OnInit {
 
   onClick() {
     this.btnClick.emit();
-    console.log("add clicked")
-    this.taskService.addTask();
+    console.log('add clicked');
   }
 }
