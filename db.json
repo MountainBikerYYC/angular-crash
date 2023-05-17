@@ -19,9 +19,9 @@
       "reminder": true
     },
     {
-      "text": "Testing",
-      "day": "succeed",
-      "reminder": false,
+      "text": "Complete more angular stuff",
+      "day": "Tommorow",
+      "reminder": true,
       "id": 4
     }
   ]
