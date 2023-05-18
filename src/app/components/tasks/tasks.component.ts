@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Task } from '../../Task';
 import { TaskService } from '../../services/task.service';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -8,7 +9,7 @@ import { TaskService } from '../../services/task.service';
 })
 export class TasksComponent {
   tasks: Task[] = [];
-
+ subscription: Subscription = new Subscription();
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
